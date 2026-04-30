@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+<style>
+body { font-family: Lexend; }
+
+.card {
+  box-shadow: 0 10px 0 #e5e5e5;
+  cursor: pointer;
+}
+.card:active {
+  transform: translateY(5px);
+  box-shadow: none;
+}
+</style>
+</head>
+
+<body class="bg-yellow-50">
+
+<!-- TOP NAV -->
+<header class="hidden md:flex bg-white border-b-2 border-gray-200 sticky top-0 z-50 md:ml-64">
+<div class="flex justify-end items-center h-16 px-6 w-full gap-6">
+
+<div class="flex items-center gap-1 text-[#FF9600] font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">local_fire_department</span>
+14
+</div>
+
+<div class="flex items-center gap-1 text-[#1CB0F6] font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">diamond</span>
+1250
+</div>
+
+<img class="w-8 h-8 rounded-full border-2 border-gray-200"
+src="https://i.pravatar.cc/40"/>
+</div>
+</header>
+
+<!-- SIDEBAR -->
+<!-- ================= SIDEBAR ================= -->
+<!-- 1. Değişiklik: md:block silindi, yerine 'md:flex flex-col' eklendi -->
+<aside class="fixed left-0 top-0 h-full w-64 p-4 z-50 bg-white border-r-2 border-gray-200 hidden md:flex flex-col">
+
+  <div class="mb-8 px-4 flex flex-col items-start">
+    <img class="w-16 h-16 mb-2"
+    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBb4bZ0DFfTjd2I_rRkUnL9Fcpu62g3LrC2bC5yRFaiMdDF4tyIjm7KJvj7Pbrq8cws8ywhvCMob37hBqFGq-K27rHPVujpDIW0LN4dMg5lQcY6fbm5rtFTuENNHOZa-RQlGvwRTTINjmY7PBx0A3Pd7u7jM5X6uXN_RgAW-byeuscydd2p9zLOZ-1QyPeyV298UwYxM5f7jP6M-NEGLPtR6pbW8V6BsIlQoAcvhLBGGx2qJrOiViYsjh3ZYhDx3glUnFRVsGuWS5V"/>
+
+    <h1 class="text-2xl font-black text-[#58CC02] tracking-tight uppercase">
+      LINGOMENTOR
+    </h1>
+  </div>
+
+  <!-- 2. Değişiklik: nav etiketine 'flex-1' eklendi -->
+  <nav class="flex flex-col gap-2 flex-1">
+
+    <!-- HOME -->
+    <a href="ilerleme_paneli.html"
+    class="flex items-center gap-4 px-4 py-3 text-gray-500 hover:bg-gray-100 rounded-xl transition">
+      <span class="material-symbols-outlined">home</span>
+      <span class="font-bold">Home</span>
+    </a>
+
+    <!-- LEARN -->
+    <a href="learn_anasayfa.html"
+    class="flex items-center gap-4 px-4 py-3 text-gray-500 hover:bg-gray-100 rounded-xl transition">
+      <span class="material-symbols-outlined">school</span>
+      <span class="font-bold">Learn</span>
+    </a>
+
+    <!-- PRACTICE -->
+<div>
+
+<button id="practiceBtn"
+class="flex items-center justify-between w-full px-4 py-3 text-gray-500 hover:bg-gray-100 rounded-xl transition">
+
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-bold">Practice</span>
+</div>
+
+<span id="practiceArrow" class="material-symbols-outlined transition-transform">
+expand_more
+</span>
+
+</button>
+
+<!-- SUB MENU -->
+<div id="practiceMenu" class="flex flex-col pl-12 mt-1 gap-2">
+
+<a href="reading.html"
+class="text-sm text-gray-500 hover:text-black hover:bg-gray-100 px-3 py-2 rounded-lg">
+Reading
+</a>
+
+<a href="vocabulary.html"
+class="text-sm text-black hover:text-black hover:bg-gray-100 px-3 py-2 rounded-lg">
+Vocabulary
+</a>
+
+</div>
+</div>
+
+    <!-- LOG OUT (ÇIKIŞ) -->
+    <!-- 3. Değişiklik: mt-8 yerine 'mt-auto' eklendi -->
+    <a href="giris.html"
+       class="flex items-center gap-4 px-4 py-3 mt-auto mb-2 text-red-500 hover:bg-red-50 rounded-xl transition">
+      <span class="material-symbols-outlined">logout</span>
+      <span class="font-bold">Log Out</span>
+    </a>
+
+  </nav>
+</aside>
+
+<!-- MAIN -->
+<div class="md:ml-64 relative z-0 flex flex-col items-center justify-center min-h-screen p-6">
+
+<h1 class="text-3xl font-black mb-6">Vocabulary Cards</h1>
+
+<div id="card" class="card bg-white w-full max-w-md h-80 rounded-3xl flex flex-col items-center justify-center text-center p-6">
+
+<h2 id="word" class="text-4xl font-black"></h2>
+
+<button onclick="speak(event)" class="mt-4 bg-blue-400 text-white px-4 py-2 rounded-xl">
+🔊 Dinle
+</button>
+
+<p id="hint" class="mt-6 text-gray-500 italic">Dokun → anlamı gör</p>
+
+</div>
+
+<div class="mt-6 text-center">
+<p id="example" class="text-gray-600"></p>
+</div>
+
+<div class="mt-6 flex gap-4">
+<button onclick="prev()" class="bg-gray-300 px-4 py-2 rounded-xl">← Geri</button>
+<button onclick="next()" class="bg-green-400 text-white px-4 py-2 rounded-xl">İleri →</button>
+</div>
+
+</div>
+
+<script>
+const words = [
+["ubiquitous","her yerde bulunan","Smartphones are ubiquitous in modern life."],
+["meticulous","çok titiz","She is meticulous about her work."],
+["resilient","dayanıklı","Children are often very resilient."],
+["cognitive","bilişsel","Cognitive skills improve with practice."],
+["paradigm","paradigma","This is a new scientific paradigm."],
+["contemplate","derin düşünmek","He began to contemplate his future."],
+["hypothesis","hipotez","The hypothesis was proven correct."],
+["viable","uygulanabilir","This is a viable solution."],
+["obsolete","modası geçmiş","This technology is obsolete."],
+["implication","çıkarım","The implication is serious."],
+["notion","kavram","He rejected the notion completely."],
+["threshold","eşik","We are at the threshold of change."],
+["coherent","tutarlı","His argument is not coherent."],
+["inherent","doğasında olan","Risk is inherent in business."],
+["ambiguity","belirsizlik","There is ambiguity in the text."],
+["deteriorate","bozulmak","The situation may deteriorate."],
+["enhance","geliştirmek","This will enhance performance."],
+["substantial","önemli, büyük","There is a substantial difference."],
+["allocate","tahsis etmek","Resources are allocated fairly."],
+["diminish","azalmak","His interest began to diminish."],
+["comprehensive","kapsamlı","We need a comprehensive plan."],
+["controversial","tartışmalı","This is a controversial topic."],
+["feasible","gerçekleştirilebilir","The plan is feasible."],
+["consequence","sonuç","Every action has consequences."],
+["rigorous","titiz, sıkı","They followed a rigorous process."],
+["sustainable","sürdürülebilir","We need sustainable energy."],
+["sophisticated","sofistike","It is a sophisticated system."],
+["intricate","karmaşık","The design is intricate."],
+["assert","iddia etmek","He asserted his opinion strongly."],
+["bias","önyargı","We must avoid bias."],
+["derive","türemek","This word derives from Latin."],
+["elaborate","detaylandırmak","Please elaborate your idea."],
+["facilitate","kolaylaştırmak","This tool facilitates learning."],
+["interpret","yorumlamak","How do you interpret this?"],
+["legitimate","meşru","That is a legitimate concern."],
+["manipulate","yönlendirmek","He tried to manipulate data."],
+["overwhelm","bunaltmak","The workload overwhelmed him."],
+["perceive","algılamak","People perceive things differently."],
+["plausible","mantıklı","That explanation is plausible."],
+["relevant","ilgili","This is relevant information."],
+["scrutinize","detaylı incelemek","They scrutinized the report."],
+["validate","doğrulamak","We need to validate the data."],
+["coincide","çakışmak","The events coincide perfectly."],
+["diverse","çeşitli","The class is diverse."],
+["fundamental","temel","This is a fundamental principle."],
+["impactful","etkili","It was an impactful speech."],
+["noteworthy","dikkate değer","A noteworthy achievement."],
+["persistent","ısrarcı","He is very persistent."],
+["prevail","galip gelmek","Justice will prevail."],
+["transition","geçiş","We are in transition period."]
+];
+
+let index = 0;
+let flipped = false;
+
+const wordEl = document.getElementById("word");
+const exampleEl = document.getElementById("example");
+const hintEl = document.getElementById("hint");
+
+function updateCard(){
+  const w = words[index];
+
+  if(flipped){
+    wordEl.innerText = w[1];
+    exampleEl.innerText = w[2];
+    hintEl.innerText = "Tekrar dokun → kelimeyi gör";
+  } else {
+    wordEl.innerText = w[0];
+    exampleEl.innerText = "";
+    hintEl.innerText = "Dokun → anlamı gör";
+  }
+}
+
+document.getElementById("card").onclick = () => {
+  flipped = !flipped;
+  updateCard();
+};
+
+function next(){
+  index = (index + 1) % words.length;
+  flipped = false;
+  updateCard();
+}
+
+function prev(){
+  index = (index - 1 + words.length) % words.length;
+  flipped = false;
+  updateCard();
+}
+
+function speak(e){
+  e.stopPropagation();
+  const utterance = new SpeechSynthesisUtterance(words[index][0]);
+  utterance.lang = "en-US";
+  speechSynthesis.speak(utterance);
+}
+
+updateCard();
+
+// dropdown
+const btn = document.getElementById("practiceBtn");
+const menu = document.getElementById("practiceMenu");
+const arrow = document.getElementById("practiceArrow");
+
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+  arrow.classList.toggle("rotate-180");
+});
+</script>
+
+
+<script src="zen-mode.js"></script>
+</body>
+</html>

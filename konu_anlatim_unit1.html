@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#2b6c00",
+        "primary-container": "#58cc02",
+      },
+      fontFamily: {
+        lexend: ["Lexend"]
+      }
+    }
+  }
+}
+</script>
+
+<style>
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400; }
+.chunky-button-primary { border-bottom: 4px solid #1f5100; }
+.chunky-button-primary:active { transform: translateY(4px); border-bottom-width: 0; }
+</style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TOP NAV -->
+<header class="hidden md:flex bg-white border-b-2 border-gray-200 sticky top-0 z-50 md:ml-64">
+<div class="flex justify-end items-center h-16 px-6 w-full gap-6">
+
+<div class="flex items-center gap-1 text-[#FF9600] font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">local_fire_department</span>
+14
+</div>
+
+<div class="flex items-center gap-1 text-[#1CB0F6] font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">diamond</span>
+1250
+</div>
+
+<img class="w-8 h-8 rounded-full border-2 border-gray-200"
+src="https://i.pravatar.cc/40"/>
+</div>
+</header>
+
+<!-- ================= SIDEBAR ================= -->
+<!-- 1. Değişiklik: md:block silindi, yerine 'md:flex flex-col' eklendi -->
+<aside class="fixed left-0 top-0 h-full w-64 p-4 z-50 bg-white border-r-2 border-gray-200 hidden md:flex flex-col">
+
+  <div class="mb-8 px-4 flex flex-col items-start">
+    <img class="w-16 h-16 mb-2"
+    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBb4bZ0DFfTjd2I_rRkUnL9Fcpu62g3LrC2bC5yRFaiMdDF4tyIjm7KJvj7Pbrq8cws8ywhvCMob37hBqFGq-K27rHPVujpDIW0LN4dMg5lQcY6fbm5rtFTuENNHOZa-RQlGvwRTTINjmY7PBx0A3Pd7u7jM5X6uXN_RgAW-byeuscydd2p9zLOZ-1QyPeyV298UwYxM5f7jP6M-NEGLPtR6pbW8V6BsIlQoAcvhLBGGx2qJrOiViYsjh3ZYhDx3glUnFRVsGuWS5V"/>
+
+    <h1 class="text-2xl font-black text-[#58CC02] tracking-tight uppercase">
+      LINGOMENTOR
+    </h1>
+  </div>
+
+  <!-- 2. Değişiklik: nav etiketine 'flex-1' eklendi -->
+  <nav class="flex flex-col gap-2 flex-1">
+
+    <!-- HOME -->
+    <a href="ilerleme_paneli.html"
+    class="flex items-center gap-4 px-4 py-3 text-gray-500 hover:bg-gray-100 rounded-xl transition">
+      <span class="material-symbols-outlined">home</span>
+      <span class="font-bold">Home</span>
+    </a>
+
+    <!-- LEARN -->
+    <a href="learn_anasayfa.html"
+    class="flex items-center gap-4 px-4 py-3 text-gray-500 hover:bg-gray-100 rounded-xl transition">
+      <span class="material-symbols-outlined">school</span>
+      <span class="font-bold">Learn</span>
+    </a>
+
+    <!-- PRACTICE -->
+    <div>
+      <button id="practiceBtn"
+      class="flex items-center justify-between w-full px-4 py-3 text-gray-500 hover:bg-gray-100 rounded-xl transition">
+
+        <div class="flex items-center gap-4">
+          <span class="material-symbols-outlined">fitness_center</span>
+          <span class="font-bold">Practice</span>
+        </div>
+
+        <span id="practiceArrow" class="material-symbols-outlined transition-transform">
+          expand_more
+        </span>
+
+      </button>
+
+      <!-- SUB MENU -->
+      <div id="practiceMenu" class="hidden flex flex-col pl-12 mt-1 gap-2">
+        <a href="reading.html"
+        class="text-sm text-gray-500 hover:text-black hover:bg-gray-100 px-3 py-2 rounded-lg">
+          Reading
+        </a>
+        <a href="vocabulary.html"
+        class="text-sm text-gray-500 hover:text-black hover:bg-gray-100 px-3 py-2 rounded-lg">
+          Vocabulary
+        </a>
+      </div>
+    </div>
+
+    <!-- LOG OUT (ÇIKIŞ) -->
+    <!-- 3. Değişiklik: mt-8 yerine 'mt-auto' eklendi -->
+    <a href="giris.html"
+       class="flex items-center gap-4 px-4 py-3 mt-72 mb-2 text-red-500 hover:bg-red-50 rounded-xl transition">
+      <span class="material-symbols-outlined">logout</span>
+      <span class="font-bold">Log Out</span>
+    </a>
+
+  </nav>
+</aside>
+
+<!-- ================= JS (dropdown çalışması için) ================= -->
+<script>
+const btn = document.getElementById("practiceBtn");
+const menu = document.getElementById("practiceMenu");
+const arrow = document.getElementById("practiceArrow");
+
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+  arrow.classList.toggle("rotate-180");
+});
+</script>
+<!-- Top AppBar (Mobile & Status) -->
+
+
+<!-- MAIN -->
+<main class="md:ml-64 p-6 pt-4 pb-40">
+
+<!-- UNIT HEADER -->
+<section class="mb-10">
+<div class="flex items-center gap-3 mt-6">
+
+<a href="learn_anasayfa.html"
+   class="w-8 h-8 flex items-center justify-center rounded-full border hover:bg-gray-100">
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+
+<span class="px-3 py-2 bg-primary-container text-white rounded-full text-xs">
+UNIT 1
+</span>
+
+<span class="px-3 py-2 bg-gray-100 text-gray-600 rounded-full text-xs">
+KONU 1
+</span>
+
+</div>
+
+<h1 class="text-3xl font-bold mt-4">Temel Cümle Yapısı</h1>
+
+<p class="text-gray-500 mt-2">
+İngilizce’de doğru cümle kurmanın temeli bu derstir. Günlük konuşmaların büyük kısmı bu yapıya dayanır.
+</p>
+</section>
+
+<!-- CONTENT -->
+<div class="grid md:grid-cols-2 gap-6">
+
+<!-- KONU -->
+<div class="bg-white p-6 rounded-2xl border">
+<h2 class="font-bold text-xl mb-2">Özne + Fiil + Nesne</h2>
+
+<p class="text-gray-600">
+İngilizce cümleler çoğunlukla <b>Özne + Fiil + Nesne</b> sırasıyla kurulur.
+Bu yapı değişmez bir iskelet gibidir.
+</p>
+
+<p class="text-gray-600 mt-3">
+Özne → yapan kişi, Fiil → yapılan eylem, Nesne → etkilenen şeydir.
+</p>
+
+<div class="mt-4 bg-gray-50 p-3 rounded-lg text-sm text-gray-600">
+Örnek: <b>I eat an apple</b> → I (özne) + eat (fiil) + an apple (nesne)
+</div>
+
+<p class="text-gray-500 text-sm mt-3">
+Bu yapı İngilizce düşünme sisteminin temelidir.
+</p>
+</div>
+
+<!-- ÖRNEKLER -->
+<div class="bg-white p-6 rounded-2xl border">
+<h2 class="font-bold text-xl mb-2">Günlük Kullanım</h2>
+
+<ul class="space-y-2 text-gray-600">
+<li>✔ I go to school every day. → Her gün okula giderim</li>
+<li>✔ She plays tennis on weekends. → Hafta sonu tenis oynar</li>
+<li>✔ They study English at home. → Evde İngilizce çalışırlar</li>
+<li>✔ He watches movies in the evening. → Akşam film izler</li>
+<li>✔ We drink coffee in the morning. → Sabah kahve içeriz</li>
+</ul>
+
+<p class="text-gray-500 text-sm mt-3">
+Bu cümleler İngilizce’nin en temel kalıplarıdır.
+</p>
+</div>
+
+<!-- KURAL -->
+<div class="md:col-span-2 bg-green-50 p-6 rounded-2xl border border-green-200">
+<h2 class="font-bold text-xl mb-2">En Önemli Kural</h2>
+
+<p class="text-gray-700">
+Present Simple zamanda “He / She / It” öznelerinde fiile <b>-s</b> eklenir.
+Bu küçük detay anlamı tamamen doğru yapar.
+</p>
+
+<div class="flex gap-4 mt-4">
+<div class="bg-white px-4 py-2 border rounded-lg text-green-600 font-bold">
+He works
+</div>
+<div class="bg-white px-4 py-2 border rounded-lg text-red-500 line-through">
+He work
+</div>
+</div>
+
+<p class="text-gray-600 mt-4">
+❗ En sık yapılan hata: “he/she/it” için -s eklemeyi unutmak.
+</p>
+
+<p class="text-gray-600 mt-2">
+💡 İpucu: Cümleyi Türkçe kur → sonra İngilizceye çevir → fiili kontrol et.
+</p>
+</div>
+
+<!-- HIZLI TEKRAR -->
+<div class="md:col-span-2 bg-white p-6 rounded-2xl border">
+
+<h2 class="font-bold text-xl mb-2">Hızlı Tekrar</h2>
+
+<p class="text-gray-600">
+Bu derste öğrendiğin en önemli yapı:
+</p>
+
+<div class="mt-3 bg-gray-50 p-4 rounded-lg font-semibold text-gray-700">
+Özne → Fiil → Nesne
+</div>
+
+<ul class="mt-4 text-gray-600 space-y-2">
+<li>✔ Özne = Kim yapıyor?</li>
+<li>✔ Fiil = Ne yapıyor?</li>
+<li>✔ Nesne = Ne etkileniyor?</li>
+</ul>
+
+<p class="text-gray-500 text-sm mt-4">
+Bu yapı İngilizce’nin temel düşünme sistemidir.
+</p>
+
+</div>
+
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer class="fixed bottom-0 left-0 right-0 bg-white border-t p-4 md:pl-64 z-50">
+  <div class="max-w-6xl mx-auto flex justify-end">
+    
+    <a href="unit1_konu2.html"
+       class="chunky-button-primary bg-primary-container text-white px-10 py-3 rounded-xl font-bold shadow-md">
+      Devam Et
+    </a>
+
+  </div>
+</footer>
+
+
+<script src="zen-mode.js"></script>
+</body>
+</html>

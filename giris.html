@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#58CC02",
+                    "surface-container-high": "#e9e8e7",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e3e2e1",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#004c6e",
+                    "outline": "#6f7b64",
+                    "inverse-on-surface": "#f1f1ef",
+                    "on-surface": "#1a1c1b",
+                    "tertiary-fixed": "#ffdf92",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#dadad9",
+                    "inverse-surface": "#2f3130",
+                    "inverse-primary": "#6be026",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#f4bf00",
+                    "on-primary-fixed": "#082100",
+                    "secondary-container": "#2fb8ff",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#755b00",
+                    "secondary-fixed-dim": "#88ceff",
+                    "surface-container-highest": "#e3e2e1",
+                    "primary-fixed-dim": "#6be026",
+                    "secondary": "#006590",
+                    "surface-container": "#eeeeec",
+                    "on-surface-variant": "#3f4a36",
+                    "on-tertiary-fixed": "#241a00",
+                    "on-error": "#ffffff",
+                    "background": "#faf9f8",
+                    "on-secondary-container": "#004666",
+                    "on-tertiary-fixed-variant": "#594400",
+                    "tertiary-container": "#ddad00",
+                    "on-primary-fixed-variant": "#1f5100",
+                    "on-background": "#1a1c1b",
+                    "surface": "#faf9f8",
+                    "surface-bright": "#faf9f8",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f4f3f2",
+                    "primary-fixed": "#87fe45",
+                    "on-secondary-fixed": "#001e2e",
+                    "outline-variant": "#becbb1",
+                    "primary-container": "#58CC02",
+                    "secondary-fixed": "#c8e6ff",
+                    "on-primary-container": "#ffffff",
+                    "surface-tint": "#58CC02",
+                    "on-tertiary-container": "#574300",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "unit": "4px",
+                    "sm": "8px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "gutter": "16px",
+                    "md": "16px",
+                    "xl": "32px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Lexend"],
+                    "display": ["Lexend"],
+                    "label-caps": ["Lexend"],
+                    "h2": ["Lexend"],
+                    "h1": ["Lexend"],
+                    "body-md": ["Lexend"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "500"}],
+                    "display": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["14px", {"lineHeight": "18px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "h2": ["20px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "700"}],
+                    "h1": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .chunky-button-primary {
+            box-shadow: 0 4px 0 0 #1f5100;
+        }
+        .chunky-button-primary:active {
+            box-shadow: 0 0px 0 0 #1f5100;
+            transform: translateY(4px);
+        }
+        .chunky-button-secondary {
+            box-shadow: 0 4px 0 0 #004c6e;
+        }
+        .chunky-button-secondary:active {
+            box-shadow: 0 0px 0 0 #004c6e;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-white dark:bg-gray-900 border-b-2 border-gray-200 dark:border-gray-800 sticky top-0 z-50">
+<div class="flex justify-between items-center h-16 px-6 w-full max-w-7xl mx-auto">
+<img alt="LingoMentor Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBb4bZ0DFfTjd2I_rRkUnL9Fcpu62g3LrC2bC5yRFaiMdDF4tyIjm7KJvj7Pbrq8cws8ywhvCMob37hBqFGq-K27rHPVujpDIW0LN4dMg5lQcY6fbm5rtFTuENNHOZa-RQlGvwRTTINjmY7PBx0A3Pd7u7jM5X6uXN_RgAW-byeuscydd2p9zLOZ-1QyPeyV298UwYxM5f7jP6M-NEGLPtR6pbW8V6BsIlQoAcvhLBGGx2qJrOiViYsjh3ZYhDx3glUnFRVsGuWS5V"/>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-4">
+
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#58CC02]" data-icon="local_fire_department">local_fire_department</span>
+<span class="material-symbols-outlined text-yellow-500" data-icon="diamond">diamond</span>
+<div class="w-8 h-8 rounded-full overflow-hidden border-2 border-surface-variant">
+<img alt="User Profile Avatar" data-alt="close-up portrait of a friendly smiling young man with a modern haircut in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVMFZQtkNlLUP-ge8T2oohQIyMB-uQAyDaIzs01CZFTcIcEmGQJZIElz2QU67mWs0CiHMm33ahrY89R6dl1aEgQgPirxHLYgsUC7gn-uOI8e2caJbLV5MsnKf1y_pFwzWdA0O8L4d5oc9wTQBV_liIBA-bkxxrM6rVK2z22XLzO-SbOzZKAiAbBX-4_X6x9eOUZuB4qys8MW0ndK_eWBTh9aixZvgnE72zaLLSPdF416T8tECI5v3tgtmJdVwcCqGWv5zEM0gmRWIq"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="w-full max-w-7xl mx-auto px-6 py-12 md:py-24 flex flex-col md:flex-row items-center justify-center gap-16 min-h-[calc(100vh-64px)]">
+<!-- Mascot Section -->
+<div class="w-full md:w-1/2 flex justify-center order-2 md:order-1">
+<div class="relative w-72 h-72 md:w-96 md:h-96">
+<!-- Background decorative element -->
+<div class="absolute inset-0 bg-primary-container/20 rounded-full scale-110 blur-3xl"></div>
+<!-- Main Illustration Placeholder Image -->
+<img alt="Lingo Mascot" class="relative z-10 w-full h-full object-contain" data-alt="a friendly minimalist 3d style green owl mascot wearing a graduation cap, smiling warmly with wide eyes against a simple background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBb4bZ0DFfTjd2I_rRkUnL9Fcpu62g3LrC2bC5yRFaiMdDF4tyIjm7KJvj7Pbrq8cws8ywhvCMob37hBqFGq-K27rHPVujpDIW0LN4dMg5lQcY6fbm5rtFTuENNHOZa-RQlGvwRTTINjmY7PBx0A3Pd7u7jM5X6uXN_RgAW-byeuscydd2p9zLOZ-1QyPeyV298UwYxM5f7jP6M-NEGLPtR6pbW8V6BsIlQoAcvhLBGGx2qJrOiViYsjh3ZYhDx3glUnFRVsGuWS5V"/>
+</div>
+</div>
+<!-- Content Section -->
+<div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left gap-8 order-1 md:order-2">
+<div class="space-y-4">
+<h1 class="font-display text-[42px] md:text-[56px] leading-[1.1] text-on-surface tracking-tight">
+                    Dil öğrenmenin <br/>
+<span class="text-primary-container">en kolay yolu.</span>
+</h1>
+<p class="font-body-lg text-on-surface-variant max-w-md mx-auto md:mx-0">
+                    Oyun oynayarak, eğlenerek ve tamamen ücretsiz bir şekilde yeni bir dil öğrenmeye bugün başla.
+                </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<a href="kayitol.html">
+  <button class="chunky-button-primary bg-primary text-white font-label-caps px-8 py-4 rounded-xl text-lg uppercase transition-all duration-100 flex items-center justify-center">
+    ÜCRETSİZ BAŞLAYIN
+  </button>
+</a>
+<a href="girisyap.html">
+  <button class="chunky-button-secondary border-2 border-outline-variant bg-white text-secondary font-label-caps px-8 py-4 rounded-xl text-lg uppercase transition-all duration-100 flex items-center justify-center">
+    HESABIM VAR
+  </button>
+</a>
+</div>
+<!-- Social proof / Minimal badges -->
+<div class="flex items-center gap-6 pt-4">
+<div class="flex -space-x-3">
+<img alt="user 1" class="w-10 h-10 rounded-full border-2 border-white" data-alt="portrait of a young man smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOGoLqZuXcyfBf1jQIfXdQLR-uYrmnI7i21XYFUSgUueOxBw9ky9YxHS_NnpQuQeGUFtLolZ5nLA1l2R-HFRLbNSXE7mjDwnUPY268rMnMMkbnNljdYQTyzE53KWWN1KfZyVwKrYkenezWUEyY7jIlFDgQS0KlTp_iu-fK7PfdFLTLBDhViDzEWmI63myJgn75aYncu9vUUXKqO_BwwVUs-jrrSJzQHfdr3A8bZPgTJD3xR9qptjy-iNF9-LaF0tN6PYHNz3Pw2lbH"/>
+<img alt="user 2" class="w-10 h-10 rounded-full border-2 border-white" data-alt="portrait of a professional woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9BiOSIuvRbSYOGwMHMV-1WtRzgZZm_Wb6MN5W-vIFHaUl_tOUJU4YdLfJH7y5HbeKASVgAYk6Moa2xibEhYxU_6dqqFUDsf9XIemAgfzOdp78OA_6gKf75xgaxA6rDndO_4NxpQEj3Kng3_0zXTPStntVT26OO-Vvu-pJAz2eV4DScX5mdt0DgpELCTIlQub3bb_k8ANsqPVOyakanYsBMLtI-rJQ2WplpPa1A1cW9JBNZk1dSel5RIVSm-RRcHpviRys17dM7xQc"/>
+<img alt="user 3" class="w-10 h-10 rounded-full border-2 border-white" data-alt="portrait of a young woman with a warm expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLF5hNu7x_TKz8uZPCVH6MMtszg0DpH5xJzgUezjdf-Oy6sC-p1DXbDFxMOUB0f5v5pjiq2vGg4gzB7pggy6HWxpMS92hHefio1s4JOKeatth3-xEUec7X4hZC-ircfWEIH7MHkmqo04h2KjbU1cQmOq90n7dSkH5eW8XHCyynkpx2dA8roQJD43zFsGfJpDxAsTY1Z3tyxsN6rnXfWlsKVvOY5Qe3aB-XFsSFMY_C2-wadrMzLW_cBq3tm1ojGmy0P15TyMI3TtPm"/>
+</div>
+<div class="text-sm font-body-md text-on-surface-variant">
+<span class="font-bold text-on-surface">500,000+</span> öğrenciye katıl
+                </div>
+</div>
+</div>
+</main>
+<!-- Simple Bento Grid Features for Value Prop -->
+<section class="w-full max-w-7xl mx-auto px-6 py-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-white border-2 border-surface-variant rounded-2xl p-8 flex flex-col gap-4">
+<div class="w-12 h-12 bg-[#DDF4FF] rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-[#1CB0F6]" data-icon="school">school</span>
+</div>
+<h3 class="font-h1 text-on-surface">Etkili Metot</h3>
+<p class="font-body-md text-on-surface-variant">Bilimsel olarak kanıtlanmış kısa derslerle dili kalıcı olarak öğrenin.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-white border-2 border-surface-variant rounded-2xl p-8 flex flex-col gap-4">
+<div class="w-12 h-12 bg-primary-container/20 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container" data-icon="fitness_center">fitness_center</span>
+</div>
+<h3 class="font-h1 text-on-surface">Kişiselleştirilmiş</h3>
+<p class="font-body-md text-on-surface-variant">Zayıf yanlarınıza odaklanan akıllı algoritmalarla daha hızlı ilerleyin.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-white border-2 border-surface-variant rounded-2xl p-8 flex flex-col gap-4">
+<div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-yellow-600" data-icon="leaderboard">leaderboard</span>
+</div>
+<h3 class="font-h1 text-on-surface">Rekabetçi Eğlence</h3>
+<p class="font-body-md text-on-surface-variant">Liglerde yarışın ve arkadaşlarınızla birlikte motive kalın.</p>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Nav for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t-2 border-gray-100 px-6 py-4 flex justify-between items-center z-50">
+<div class="flex flex-col items-center gap-1 text-primary-container">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Learn</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Practice</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Leads</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Shop</span>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="w-full border-t-2 border-surface-variant mt-24 py-12 text-center">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-xl font-black text-[#58CC02] mb-6">LingoMentor</div>
+<div class="flex flex-wrap justify-center gap-8 mb-8 text-on-surface-variant font-label-caps text-xs">
+<a href="hakkimizda.html" class="hover:text-primary transition-colors">HAKKIMIZDA</a>
+<a href="yardim.html" class="hover:text-primary transition-colors">YARDIM</a>
+<a href="gizlilik.html" class="hover:text-primary transition-colors">GİZLİLİK</a>
+</div>
+<p class="text-on-surface-variant text-sm">© 2024 LingoMentor International. Tüm hakları saklıdır.</p>
+</div>
+</footer>
+
+<script src="zen-mode.js"></script>
+</body></html>

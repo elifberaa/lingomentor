@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Linguist - Reading Practice</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#6be026",
+                        "on-surface": "#1a1c1b",
+                        "primary-container": "#58cc02",
+                        "surface-container-high": "#e9e8e7",
+                        "tertiary-container": "#ddad00",
+                        "surface-variant": "#e3e2e1",
+                        "secondary-container": "#2fb8ff",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-secondary-container": "#004666",
+                        "on-primary-fixed": "#082100",
+                        "tertiary-fixed": "#ffdf92",
+                        "surface-tint": "#2b6c00",
+                        "surface-bright": "#faf9f8",
+                        "outline-variant": "#becbb1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#004c6e",
+                        "inverse-on-surface": "#f1f1ef",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#001e2e",
+                        "on-primary-fixed-variant": "#1f5100",
+                        "primary": "#2b6c00",
+                        "secondary-fixed-dim": "#88ceff",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f4f3f2",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#1e5000",
+                        "background": "#f3fff4",
+                        "surface-dim": "#dadad9",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#87fe45",
+                        "inverse-surface": "#2f3130",
+                        "surface-container": "#eeeeec",
+                        "primary-fixed-dim": "#6be026",
+                        "on-background": "#1a1c1b",
+                        "secondary-fixed": "#c8e6ff",
+                        "outline": "#6f7b64",
+                        "tertiary-fixed-dim": "#f4bf00",
+                        "tertiary": "#755b00",
+                        "secondary": "#006590",
+                        "error": "#ba1a1a",
+                        "surface": "#faf9f8",
+                        "on-tertiary-fixed-variant": "#594400",
+                        "surface-container-highest": "#e3e2e1",
+                        "on-surface-variant": "#3f4a36",
+                        "on-tertiary-container": "#574300"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "xl": "32px",
+                        "margin-mobile": "20px",
+                        "lg": "24px",
+                        "sm": "8px",
+                        "unit": "4px",
+                        "gutter": "16px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Lexend"],
+                        "h1": ["Lexend"],
+                        "h2": ["Lexend"],
+                        "label-caps": ["Lexend"],
+                        "body-md": ["Lexend"],
+                        "display": ["Lexend"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "500"}],
+                        "h1": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "h2": ["20px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "700"}],
+                        "label-caps": ["14px", {"lineHeight": "18px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "500"}],
+                        "display": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .chunky-button-shadow {
+            box-shadow: 0 4px 0 0 #2b6c00;
+        }
+        .chunky-button-shadow:active {
+            box-shadow: 0 0px 0 0 #2b6c00;
+            transform: translateY(4px);
+        }
+        .chunky-card-shadow {
+            box-shadow: 0 4px 0 0 #e5e5e5;
+        }
+        .chunky-card-shadow:hover {
+            box-shadow: 0 4px 0 0 #2b6c00;
+            border-color: #2b6c00;
+        }
+        .side-nav-active-shadow {
+            box-shadow: 0 4px 0 0 #2b6c00;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background min-h-screen">
+<!-- Top Navigation for Mobile (Hidden on MD+) -->
+<header class="md:hidden fixed top-0 left-0 w-full z-50 bg-white border-b-2 border-surface-container-highest px-6 h-16 flex justify-between items-center">
+<span class="text-2xl font-black tracking-tight text-primary-container">Linguist</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container">local_fire_department</span>
+<span class="material-symbols-outlined text-on-surface-variant">account_circle</span>
+</div>
+</header>
+<!-- TOP NAV -->
+<header class="hidden md:flex bg-white border-b-2 border-gray-200 sticky top-0 z-50 md:ml-64">
+<div class="flex justify-end items-center h-16 px-6 w-full gap-6">
+
+<div class="flex items-center gap-1 text-[#FF9600] font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">local_fire_department</span>
+14
+</div>
+
+<div class="flex items-center gap-1 text-[#1CB0F6] font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">diamond</span>
+1250
+</div>
+
+<img class="w-8 h-8 rounded-full border-2 border-gray-200"
+src="https://i.pravatar.cc/40"/>
+</div>
+</header>
+<!-- ================= SIDEBAR ================= -->
+<!-- 1. Değişiklik: md:block silindi, yerine 'md:flex flex-col' eklendi -->
+<aside class="fixed left-0 top-0 h-full w-64 p-4 z-50 bg-white border-r-2 border-gray-200 hidden md:flex flex-col">
+
+  <div class="mb-8 px-4 flex flex-col items-start">
+    <img class="w-16 h-16 mb-2"
+    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBb4bZ0DFfTjd2I_rRkUnL9Fcpu62g3LrC2bC5yRFaiMdDF4tyIjm7KJvj7Pbrq8cws8ywhvCMob37hBqFGq-K27rHPVujpDIW0LN4dMg5lQcY6fbm5rtFTuENNHOZa-RQlGvwRTTINjmY7PBx0A3Pd7u7jM5X6uXN_RgAW-byeuscydd2p9zLOZ-1QyPeyV298UwYxM5f7jP6M-NEGLPtR6pbW8V6BsIlQoAcvhLBGGx2qJrOiViYsjh3ZYhDx3glUnFRVsGuWS5V"/>
+
+    <h1 class="text-2xl font-black text-[#58CC02] tracking-tight uppercase">
+      LINGOMENTOR
+    </h1>
+  </div>
+
+  <!-- 2. Değişiklik: nav etiketine 'flex-1' eklendi -->
+  <nav class="flex flex-col gap-2 flex-1">
+<!-- HOME -->
+<a href="ilerleme_paneli.html"
+class="flex items-center gap-4 px-4 py-3 text-gray-500 hover:bg-gray-100 rounded-xl transition">
+<span class="material-symbols-outlined">home</span>
+<span class="font-bold">Home</span>
+</a>
+
+<!-- LEARN -->
+<a href="learn_anasayfa.html"
+class="flex items-center gap-4 px-4 py-3 text-gray-500 hover:bg-gray-100 rounded-xl transition">
+<span class="material-symbols-outlined">school</span>
+<span class="font-bold">Learn</span>
+</a>
+
+<!-- PRACTICE -->
+<div>
+
+<button id="practiceBtn"
+class="flex items-center justify-between w-full px-4 py-3 text-gray-500 hover:bg-gray-100 rounded-xl transition">
+
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-bold">Practice</span>
+</div>
+
+<span id="practiceArrow" class="material-symbols-outlined transition-transform">
+expand_more
+</span>
+
+</button>
+
+<!-- SUB MENU -->
+<div id="practiceMenu" class="flex flex-col pl-12 mt-1 gap-2">
+
+<a href="reading.html"
+class="text-sm text-black hover:text-black hover:bg-gray-100 px-3 py-2 rounded-lg">
+Reading
+</a>
+
+<a href="vocabulary.html"
+class="text-sm text-gray-500 hover:text-black hover:bg-gray-100 px-3 py-2 rounded-lg">
+Vocabulary
+</a>
+
+</div>
+</div>
+
+<!-- LOG OUT (ÇIKIŞ) -->
+    <!-- 3. Değişiklik: mt-8 yerine 'mt-auto' eklendi -->
+    <a href="giris.html"
+       class="flex items-center gap-4 px-4 py-3 mt-auto mb-2 text-red-500 hover:bg-red-50 rounded-xl transition">
+      <span class="material-symbols-outlined">logout</span>
+      <span class="font-bold">Log Out</span>
+    </a>
+
+</nav>
+</aside>
+
+<!-- ================= JS (dropdown çalışması için) ================= -->
+<script>
+const btn = document.getElementById("practiceBtn");
+const menu = document.getElementById("practiceMenu");
+const arrow = document.getElementById("practiceArrow");
+
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+  arrow.classList.toggle("rotate-180");
+});
+</script>
+
+<!-- Main Content Area -->
+<main class="md:ml-64 pt-20 md:pt-8 pb-24 px-gutter md:px-xl">
+<div class="max-w-4xl mx-auto">
+<!-- Header Section -->
+<section class="mb-xl flex flex-col md:flex-row md:items-end justify-between gap-md">
+<div>
+<h1 class="font-display text-display text-on-surface mb-2">Reading Section</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Choose a story to improve your English comprehension.</p>
+</div>
+
+</section>
+
+
+</div>
+</div>
+<!-- Reading Tasks Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Card 1 -->
+<div class="group bg-white p-6 rounded-3xl border-2 border-surface-container-highest chunky-card-shadow transition-all cursor-pointer flex flex-col justify-between min-h-[220px]">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-secondary-container/10 rounded-2xl flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl" data-icon="flight">flight</span>
+</div>
+<span class="px-3 py-1 bg-primary-container/10 text-primary-container text-[12px] font-bold rounded-full border border-primary-container">Beginner</span>
+</div>
+<h3 class="font-h1 text-h1 text-on-surface mb-2">A Day in Paris</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-2">Follow Thomas as he explores the famous cafes and streets of the French capital.</p>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<span class="text-sm font-label-caps text-on-surface-variant">5 min read</span>
+<a href="paris.html" class="flex items-center gap-2 bg-primary-container text-white px-6 py-2 rounded-xl font-bold chunky-button-shadow">
+    Start
+    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white p-6 rounded-3xl border-2 border-surface-container-highest chunky-card-shadow transition-all cursor-pointer flex flex-col justify-between min-h-[220px]">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-tertiary-container/10 rounded-2xl flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl" data-icon="mystery">mystery</span>
+</div>
+<span class="px-3 py-1 bg-tertiary-container/10 text-tertiary text-[12px] font-bold rounded-full border border-tertiary">Intermediate</span>
+</div>
+<h3 class="font-h1 text-h1 text-on-surface mb-2">The Lost Key</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-2">A mysterious discovery in an old attic leads to an unexpected family secret.</p>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<span class="text-sm font-label-caps text-on-surface-variant">8 min read</span>
+<a href="lostkey.html" class="flex items-center gap-2 bg-primary-container text-white px-6 py-2 rounded-xl font-bold chunky-button-shadow">
+    Start
+    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-white p-6 rounded-3xl border-2 border-surface-container-highest chunky-card-shadow transition-all cursor-pointer flex flex-col justify-between min-h-[220px]">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-on-secondary-fixed-variant/10 rounded-2xl flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-3xl" data-icon="memory">memory</span>
+</div>
+<span class="px-3 py-1 bg-error-container text-on-error-container text-[12px] font-bold rounded-full border border-error">Advanced</span>
+</div>
+<h3 class="font-h1 text-h1 text-on-surface mb-2">Future of AI</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-2">An in-depth look at how artificial intelligence is shaping the modern workspace.</p>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<span class="text-sm font-label-caps text-on-surface-variant">12 min read</span>
+<a href="futureofai.html" class="flex items-center gap-2 bg-primary-container text-white px-6 py-2 rounded-xl font-bold chunky-button-shadow">
+    Start
+    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 4 (Placeholder/Coming Soon) -->
+<!-- Card 4 -->
+<div class="group bg-white p-6 rounded-3xl border-2 border-surface-container-highest chunky-card-shadow transition-all cursor-pointer flex flex-col justify-between min-h-[220px]">
+  <div>
+    <div class="flex justify-between items-start mb-4">
+      <div class="w-12 h-12 bg-secondary-container/10 rounded-2xl flex items-center justify-center text-secondary">
+        <span class="material-symbols-outlined text-3xl">coffee</span>
+      </div>
+      <span class="px-3 py-1 bg-primary-container/10 text-primary-container text-[12px] font-bold rounded-full border border-primary-container">
+        Beginner
+      </span>
+    </div>
+
+    <h3 class="font-h1 text-h1 text-on-surface mb-2">The First Coffee</h3>
+    <p class="font-body-md text-on-surface-variant line-clamp-2">
+      Emma visits a small café for the first time and discovers the simple joy of her morning coffee.
+    </p>
+  </div>
+
+  <div class="mt-6 flex items-center justify-between">
+    <span class="text-sm font-label-caps text-on-surface-variant">4 min read</span>
+
+    <a href="coffee.html"
+      class="flex items-center gap-2 bg-primary-container text-white px-6 py-2 rounded-xl font-bold chunky-button-shadow">
+      Start
+      <span class="material-symbols-outlined text-sm">arrow_forward</span>
+    </a>
+  </div>
+</div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+  <footer class="w-full border-t-2 border-surface-variant mt-24 py-12 text-center md:pl-64">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- LOGO -->
+      <div class="text-xl font-black text-[#58CC02] mb-6">
+        LingoMentor
+      </div>
+
+      <!-- LINKS -->
+      <div class="flex flex-wrap justify-center gap-8 mb-8 text-gray-500 text-xs font-bold tracking-wide">
+        <a href="hakkimizda.html" class="hover:text-[#2b6c00] transition">HAKKIMIZDA</a>
+        <a href="yardim.html" class="hover:text-[#2b6c00] transition">YARDIM</a>
+        <a href="gizlilik.html" class="hover:text-[#2b6c00] transition">GİZLİLİK</a>
+      </div>
+
+      <!-- COPYRIGHT -->
+      <p class="text-gray-400 text-sm">
+        © 2024 LingoMentor International. Tüm hakları saklıdır.
+      </p>
+    </div>
+  </footer>
+
+
+<script src="zen-mode.js"></script>
+</body>
+</html>
+<!-- Bottom Nav for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t-2 border-surface-container-highest flex justify-around items-center h-16 z-50">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="text-[10px] font-bold">Learn</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary-container" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">exercise</span>
+<span class="text-[10px] font-bold">Practice</span>
+</a>
+</nav>
+
+
+<script src="zen-mode.js"></script>
+</body></html>

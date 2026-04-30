@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hakkımızda | LingoMentor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#1f5100",
+                    "on-primary-fixed": "#082100",
+                    "on-surface": "#1a1c1b",
+                    "outline": "#6f7b64",
+                    "on-tertiary-fixed": "#241a00",
+                    "tertiary": "#755b00",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#ffdf92",
+                    "primary-fixed-dim": "#6be026",
+                    "on-primary-container": "#1e5000",
+                    "surface-tint": "#2b6c00",
+                    "tertiary-container": "#ddad00",
+                    "surface-container": "#eeeeec",
+                    "on-surface-variant": "#3f4a36",
+                    "outline-variant": "#becbb1",
+                    "on-secondary-fixed-variant": "#004c6e",
+                    "secondary-fixed-dim": "#88ceff",
+                    "secondary-container": "#2fb8ff",
+                    "on-tertiary-fixed-variant": "#594400",
+                    "surface-variant": "#e3e2e1",
+                    "on-tertiary-container": "#574300",
+                    "primary": "#2b6c00",
+                    "secondary": "#006590",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f1f1ef",
+                    "surface-container-highest": "#e3e2e1",
+                    "error": "#ba1a1a",
+                    "on-background": "#1a1c1b",
+                    "primary-fixed": "#87fe45",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#001e2e",
+                    "primary-container": "#58cc02",
+                    "inverse-primary": "#6be026",
+                    "inverse-surface": "#2f3130",
+                    "surface-container-high": "#e9e8e7",
+                    "secondary-fixed": "#c8e6ff",
+                    "surface": "#faf9f8",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#f4bf00",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "background": "#faf9f8",
+                    "surface-dim": "#dadad9",
+                    "surface-bright": "#faf9f8",
+                    "on-secondary-container": "#004666",
+                    "surface-container-low": "#f4f3f2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "24px",
+                    "xs": "4px",
+                    "xl": "32px",
+                    "sm": "8px",
+                    "margin-mobile": "20px",
+                    "unit": "4px",
+                    "md": "16px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "display": ["Lexend"],
+                    "h1": ["Lexend"],
+                    "h2": ["Lexend"],
+                    "body-lg": ["Lexend"],
+                    "label-caps": ["Lexend"],
+                    "body-md": ["Lexend"]
+            },
+            "fontSize": {
+                    "display": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h1": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "h2": ["20px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "500"}],
+                    "label-caps": ["14px", {"lineHeight": "18px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tactile-button {
+            box-shadow: 0 4px 0 0 #1e5000;
+            transition: all 0.1s ease;
+        }
+        .tactile-button:active {
+            box-shadow: 0 0px 0 0 #1e5000;
+            transform: translateY(4px);
+        }
+        .tactile-card {
+            border: 2px solid #e3e2e1;
+            box-shadow: 0 4px 0 0 #e3e2e1;
+        }
+        .tactile-card:hover {
+            border-color: #58cc02;
+            box-shadow: 0 4px 0 0 #1e5000;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-zinc-900 docked full-width top-0 border-b-2 border-zinc-200 dark:border-zinc-800 z-50 sticky">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-lime-500 tracking-tight font-lexend font-bold">LingoMentor</div>
+<nav class="hidden md:flex space-x-8 items-center">
+
+</nav>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12 md:py-24">
+<!-- Hero Section -->
+<section class="flex flex-col md:flex-row items-center gap-12 mb-24">
+<div class="w-full md:w-1/2 space-y-6">
+<span class="inline-block bg-secondary-fixed text-on-secondary-container px-4 py-1 rounded-full text-label-caps font-display">MERHABA!</span>
+<h1 class="text-display font-display text-on-surface">Hakkımızda</h1>
+<p class="text-body-lg text-on-surface-variant max-w-xl">
+                    LingoMentor olarak, dil öğrenmenin herkes için eğlenceli, erişilebilir ve ücretsiz olması gerektiğine inanıyoruz. Dünyayı birbirine bağlayan bir köprü kuruyoruz.
+                </p>
+<div class="pt-4">
+
+</div>
+</div>
+<div class="w-full md:w-1/2 flex justify-center">
+<div class="relative w-64 h-64 md:w-80 md:h-80 bg-primary-fixed-dim rounded-full flex items-center justify-center">
+<img alt="LingoMentor Mascot" class="w-48 md:w-60 h-auto drop-shadow-xl" data-alt="A friendly, cute green stylized owl mascot character sitting on a book, vibrant colors, clean vector style illustration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbRVGw8mka7wlIBPHmNqVnMEmQ4SCidL8WMgp4YEQb61SgIIecVZ5GMIRJ9S-UwfgvCUrFrO7UHFzTyqJyhlBgoKaCHDPVoxNbKDN-wfrxzCTUvcr3fLM9M72jKLYSamwXmZjR4OEacFZ8wCqKLJbK5LTi-ppbc1u4EohC4y-Hf3dmzv73g8Qh2vy11hV-8fbBA0zA1ywX9y6z1MHHAQV9o_9CJGhvpwKYT6Qj3kECbfjEgL7NwT1JADOOYejtsA8k1zI47OAmWj8y"/>
+</div>
+</div>
+</section>
+<!-- Mission & Stats Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+<div class="md:col-span-2 bg-white tactile-card p-8 rounded-3xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="flag">flag</span>
+<h2 class="text-h1 font-display mb-4">Misyonumuz</h2>
+<p class="text-body-md text-on-surface-variant">Dünya genelinde 100'den fazla dilde eğitimi demokratikleştiriyoruz. Teknolojiyi ve oyunlaştırmayı kullanarak, dil bariyerlerini ortadan kaldırmayı hedefliyoruz.</p>
+</div>
+<div class="mt-8 flex gap-4">
+<div class="flex-1 bg-surface-container-low p-4 rounded-2xl border-2 border-outline-variant">
+<div class="text-h2 font-display text-primary">10M+</div>
+<div class="text-label-caps text-on-surface-variant">ÖĞRENCİ</div>
+</div>
+<div class="flex-1 bg-surface-container-low p-4 rounded-2xl border-2 border-outline-variant">
+<div class="text-h2 font-display text-secondary">40+</div>
+<div class="text-label-caps text-on-surface-variant">DİL</div>
+</div>
+</div>
+
+</section>
+<!-- Story Section -->
+<section class="mb-24 bg-surface-container-lowest border-2 border-zinc-200 rounded-[40px] overflow-hidden">
+<div class="flex flex-col md:flex-row">
+<div class="w-full md:w-1/2 p-12 md:p-16 space-y-6">
+<h2 class="text-h1 font-display">Hikayemiz Nasıl Başladı?</h2>
+<p class="text-body-md text-on-surface-variant leading-relaxed">
+                        2020 yılında, iki dil tutkunu arkadaşın bir kahve dükkanında "Neden dil öğrenmek bu kadar sıkıcı ve pahalı?" sorusunu sormasıyla başladı her şey. <br/><br/>
+                        Geleneksel yöntemlerin statik yapısını kırmak ve yerine dinamik, yaşayan bir sistem kurmak istedik. LingoMentor, o günden beri milyonlarca insanın hayatına dokunan küresel bir aileye dönüştü.
+                    </p>
+</div>
+<div class="w-full md:w-1/2 min-h-[300px]">
+<img alt="Ekibimiz" class="w-full h-full object-cover" data-alt="Group of young diverse creative professionals collaborating in a bright modern office with plants and colorful walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2lm5kMSs88Ei--8jFGnr5njuH7g8lI847r9G2zy2FA4y0fc3Aq7IcNkhiybDbAT_W8ZShfMNhr2WhsPWC7Rn-xF1DVtAuqGVLkr5AQJSSiCeRQTxG8oUIdQ58cmVIwFYb59S_wxV7hzJN2kpDsL8tiauj6aEOcDXDHb5wE0MnkkcGf102QfCwEMFqKcpVvdc-RutNAOYE6yWW1Cw38hndv8Y1PEmqFISkCiarsbR3Ekcplj8_F4PFaBsPGNLgUIu48EeAQYPqSLWp"/>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="mb-24">
+<div class="text-center mb-12">
+<h2 class="text-display font-display mb-4">Ekibimizle Tanışın</h2>
+<p class="text-body-lg text-on-surface-variant">LingoMentor'un arkasındaki tutkulu zihinler.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Team Member 1 -->
+<div class="bg-white tactile-card p-6 rounded-3xl text-center group">
+<div class="mb-4 overflow-hidden rounded-2xl aspect-square">
+<img alt="Elif Yılmaz" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="Professional portrait of a confident woman smiling, modern corporate setting with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgrabzKgT0NK0OXT_0tmKt3Go_kB4GyFqBKzMWGaHHWjLBA5F-gKNLyAm9UEiE_meSVgYu9dzg7s_ThiVLM_27ZFLPXxUinuT4ghx2D_sN3Wkx457G2dOhDN47xOA4km5CYppTzssXYftPRQpgfYl1j1bdKdfOVEpm2WcRylKvk_-r0A_t_PjESqzsdTeunULOpli9qqspkCkltny0pIOuCrrIXe6-26-AIG6Lz2KjEsGC57mPTf7lCvJ6bF2emKpJ1i4qpIlvYyIx"/>
+</div>
+<h4 class="text-h2 font-display">Elif Yılmaz</h4>
+<p class="text-label-caps text-primary mb-2">KURUCU &amp; CEO</p>
+</div>
+<!-- Team Member 2 -->
+<div class="bg-white tactile-card p-6 rounded-3xl text-center group">
+<div class="mb-4 overflow-hidden rounded-2xl aspect-square">
+<img alt="Can Demir" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="Portrait of a young man with glasses, tech startup environment background, warm and friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq6nG76oP7c_Tmuc-OuRdYT4j3QNQe995nTYTSKTUwxS56pnayfJqqCbU2U6TvGfMT_9_GNddnaaUMA09sMhtv8JFyu2FRpNiYc_N7HTPK2p_gzp6nwd_riDKYo6frlmjSpiRbmgbm8DCBPxoejrsppSGwpXu37bfqjD25Ydcy8xeH42BUDBbaYLfeIML1-SP-tNlDUCanGKH-JZopvqmSFzQrUg7XWFXf7PE2udCRCblzdQeZavCZ3oJ4uOZVw9l-n-_RaP3AsdF7"/>
+</div>
+<h4 class="text-h2 font-display">Can Demir</h4>
+<p class="text-label-caps text-primary mb-2">CTO</p>
+</div>
+<!-- Team Member 3 -->
+<div class="bg-white tactile-card p-6 rounded-3xl text-center group">
+<div class="mb-4 overflow-hidden rounded-2xl aspect-square">
+<img alt="Selin Aras" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="Woman with professional attire, smiling warmly, soft studio lighting with clean minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_fTj67x48kk3Kq1Ctt4-YeLawtAs7ZAYAoywuT2VWzjye6w4jCcBuUGWiGeCC7NIxPCHmHIQ8L__7phrHjdoKWFychIS5JU2SM_b6KVnlB6hMCyryss8lhHQXYFp2lN7P3zU7vpFzwd3WpV77xoznqkNMhEY0-vEwop1ai9EhTaqcgzkni9owVKBByKp3ENr1fkB9fATKQV1VFR7lH9rlFraoF_miwH3eABWn0EriNgDPaM6hRCAVS_NY9LB37Up5z4e3zCA2Japv"/>
+</div>
+<h4 class="text-h2 font-display">Selin Aras</h4>
+<p class="text-label-caps text-primary mb-2">TASARIM LİDERİ</p>
+</div>
+<!-- Team Member 4 -->
+<div class="bg-white tactile-card p-6 rounded-3xl text-center group">
+<div class="mb-4 overflow-hidden rounded-2xl aspect-square">
+<img alt="Mert Kaya" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="A man with a beard and friendly eyes looking at camera, outdoor urban park setting with soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMl2QYO3WPf1ACPVgjkeNWKmbMXj87XmUyuQ7MKECziRXY8HZOqjr_Gpki1h_gHZlUhcHbIN-OJqnIAreXJnGGw44pCb_wdZ55nXz4dj07EayGgz-JHzCfkxaH2nysu8ig4qmryM_WxV3wwOv5ltKGnpCiQj2BL15TDydZyhuJN2CkY4xFJel8wi9DTVt48hpFFGFwmV8p8xTkXlANgVyRjAZho8J6-VwZzFLfa7myEcp8ORDiurb_JnvQdpzMvwZFsQAwGXq29tEY"/>
+</div>
+<h4 class="text-h2 font-display">Mert Kaya</h4>
+<p class="text-label-caps text-primary mb-2">EĞİTİM DİREKTÖRÜ</p>
+</div>
+</div>
+</section>
+
+</main>
+
+
+
+<script src="zen-mode.js"></script>
+</body></html>
