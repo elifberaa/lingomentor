@@ -182,10 +182,54 @@
         requestAnimationFrame(detectLoop);
     }
 
+    // Bildirim Sesini Çal (Web Audio API kullanarak yumuşak bir sinyal üretir)
+    function playAlertSound() {
+        try {
+            const AudioContext = window.AudioContext || window.webkitAudioContext;
+            if (!AudioContext) return;
+            const ctx = new AudioContext();
+            
+            // İlk nota (Ding)
+            const osc1 = ctx.createOscillator();
+            const gain1 = ctx.createGain();
+            osc1.type = 'sine';
+            osc1.frequency.setValueAtTime(523.25, ctx.currentTime); // C5 (Do)
+            
+            gain1.gain.setValueAtTime(0, ctx.currentTime);
+            gain1.gain.linearRampToValueAtTime(0.5, ctx.currentTime + 0.05);
+            gain1.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
+            
+            osc1.connect(gain1);
+            gain1.connect(ctx.destination);
+            osc1.start(ctx.currentTime);
+            osc1.stop(ctx.currentTime + 0.5);
+
+            // İkinci nota (Dong - biraz daha pes)
+            const osc2 = ctx.createOscillator();
+            const gain2 = ctx.createGain();
+            osc2.type = 'sine';
+            osc2.frequency.setValueAtTime(440, ctx.currentTime + 0.15); // A4 (La)
+            
+            gain2.gain.setValueAtTime(0, ctx.currentTime + 0.15);
+            gain2.gain.linearRampToValueAtTime(0.5, ctx.currentTime + 0.2);
+            gain2.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.8);
+            
+            osc2.connect(gain2);
+            gain2.connect(ctx.destination);
+            osc2.start(ctx.currentTime + 0.15);
+            osc2.stop(ctx.currentTime + 0.8);
+
+        } catch (e) {
+            console.warn("Ses çalınamadı: ", e);
+        }
+    }
+
     // 5. Zen Modu Tetiklendiğinde Olacaklar (Ekrana Uyarı Çıkarma)
     function triggerZenModeAction() {
         isZenModeActive = true;
         console.log("🚨 Zen Modu: Yorgunluk/Odak kaybı tespit edildi!");
+        
+        playAlertSound(); // Uyarı sesini tetikle
 
         // Örnek bir görsel uyarı: Ekranı karartma ve mesaj gösterme
         const overlay = document.createElement('div');
