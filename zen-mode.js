@@ -151,9 +151,19 @@
 
             // Eğer Sınıf 1 işe yaramadıysa, belki Sınıf 0 kapalı gözdür. 
             // Şimdilik Index 1'i kullanıyoruz ama ekranda ikisini de göreceksiniz.
-            const score = predictionArray.length > 1 ? predictionArray[1] : predictionArray[0];
+            const score0 = predictionArray[0];
+            const score1 = predictionArray.length > 1 ? predictionArray[1] : 0;
             
-            debugText += `<br>Kullanılan Score: ${score.toFixed(4)}<br>`;
+            // Kullanılacak skoru Sınıf 0 veya Sınıf 1 olarak ayarla
+            // ŞİMDİLİK SINIF 0'I BAZ ALALIM (Genelde yorgunluk/kapalı göz 0. indekste olur)
+            const score = score0; 
+
+            debugText += `<br>Sınıf 0: ${score0.toFixed(4)}`;
+            if (predictionArray.length > 1) {
+                debugText += `<br>Sınıf 1: ${score1.toFixed(4)}<br>`;
+            } else {
+                debugText += `<br>`;
+            }
             
             // Zamana dayalı kontrol (Frame yerine)
             if (score >= FATIGUE_THRESHOLD) {
