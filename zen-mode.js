@@ -4,7 +4,7 @@
     // --- KONFİGÜRASYON ---
     const MODEL_URL = 'models/tfjs_model/model.json'; // Modelin yolu
     const FATIGUE_THRESHOLD = 0.85; // Hassasiyet (0.0 ile 1.0 arası). 
-    const REQUIRED_FATIGUE_TIME_MS = 3000; // Gözlerin en az kaç milisaniye kapalı kalması gerektiği (3000 ms = 3 Saniye)
+    const REQUIRED_FATIGUE_TIME_MS = 5000; // Gözlerin en az kaç milisaniye kapalı kalması gerektiği (5000 ms = 5 Saniye)
 
     let fatigueStartTime = 0;
     let isZenModeActive = false;
