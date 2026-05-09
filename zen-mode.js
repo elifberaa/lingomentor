@@ -3,7 +3,7 @@
 (function () {
     // --- KONFİGÜRASYON ---
     const MODEL_URL = 'models/tfjs_model/model.json'; // Modelin yolu
-    const FATIGUE_THRESHOLD = 0.30; // Hassasiyet (%30). Model %30 kapalı olduğunu düşündüğünde kronometre başlar. 
+    const FATIGUE_THRESHOLD = 0.50; // Hassasiyet (%50). Model %50 kapalı/yorgun olduğunu düşündüğünde kronometre başlar. 
     const REQUIRED_FATIGUE_TIME_MS = 3000; // Gözlerin en az kaç milisaniye kapalı kalması gerektiği (3000 ms = 3 Saniye)
 
     let fatigueStartTime = 0;
