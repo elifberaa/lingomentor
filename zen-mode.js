@@ -2,7 +2,7 @@
 
 (function () {
     // --- KONFİGÜRASYON ---
-    const EAR_THRESHOLD = 0.22; // Göz kırpma/kapalı eşiği (Genelde 0.20 - 0.25 arasıdır)
+    const EAR_THRESHOLD = 0.20; // Göz kırpma/kapalı eşiği (Daha katı olması için 0.20'ye düşürüldü)
     const REQUIRED_FATIGUE_TIME_MS = 4000; // Gözlerin en az kaç milisaniye kapalı kalması gerektiği (4000 ms = 4 Saniye)
 
     let fatigueStartTime = 0;
